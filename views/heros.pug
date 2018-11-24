@@ -1,0 +1,19 @@
+extends layout
+
+block content
+ each val in data
+  .row
+   .col-6
+    .card.blue-grey
+     .card-content.-text
+      .card-title
+       h3 #{val.name}
+        nav
+         ul
+          li
+           a(href='viewHero?id='+val._id) VIEW
+           a(href='deleteHero?id='+val._id) DELETE
+           a(href='updateHero?id='+val._id) UPDATE
+      p Name:#{val.name} 
+      p Phone No:#{val.phoneNo}
+      p Id:#{val._id} 
